@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <title>404 - Pagina non trovata</title>
+    <meta charset="utf-8">
+    <meta name="description" content="Sukketto's website">
+    <meta name="author" content="Sukketto, BisUmTo">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+</head>
+<body>
+    <h1>Pagina non trovata!</h1>
+    <p>La pagina che stai cercando non esiste.</p>
+    <p>Stavi forse cercando...<br>
+        <a data-url="homepage"  
+            data-short-url="home" 
+            href="/">Home</a><br>
+        <a data-url="discord"
+            data-short-url="ds"   
+            href="https://discord.gg/P3T4DgsThZ">Discord</a><br>
+        <a data-url="twitch"    
+            data-short-url="tv"   
+            href="https://twitch.com/ilsukketto">Twitch</a><br>
+        <a data-url="youtube"   
+            data-short-url="yt"   
+            href="https://youtube.com/c/Sukketto">YouTube</a><br>
+        <a data-url="instagram" 
+            data-short-url="ig"
+            href="https://instagram.com/ilsukketto">Twitter</a><br>
+        <a data-url="github"
+            data-short-url="gh"
+            href="https://github.com/Sukketto">GitHub</a><br>
+        <a data-url="tiktok"
+            data-short-url="tt"
+            href="https://tiktok.com/@ilsukketto">TikTok</a><br>
+    </p>
+
+    <script>
+        // if window pathname is one of the short-urls or urls, redirect to href
+        const links = document.querySelectorAll('a[data-url]');
+        const pathname = window.location.pathname;
+        
+        links.forEach(link => {
+            const url = link.dataset.url;
+            const shortUrl = link.dataset.shortUrl;
+            if (pathname === `/${url}` || pathname === `/${shortUrl}`) {
+                window.location.href = link.href;
+            }
+        });
+    </script>
+</body>
+</html>

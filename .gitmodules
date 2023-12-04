@@ -1,3 +1,6 @@
 [submodule "spot"]
 	path = spot
 	url = https://github.com/Sukketto/spot
+[submodule "katos"]
+	path = katos
+	url = https://github.com/Sukketto/katos

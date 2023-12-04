@@ -1,0 +1,3 @@
+[submodule "spot"]
+	path = spot
+	url = https://github.com/Sukketto/mgw
